@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.variable}`}
+        className={`${sora.variable} max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8`}
       >
         {children}
       </body>

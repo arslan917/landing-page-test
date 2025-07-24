@@ -140,7 +140,7 @@ export default function Home() {
               <Image
                 src={klipai_image}
                 alt="tag1"
-                className="object-contein"
+                className="object-contain"
               />
             </div>
 
@@ -156,7 +156,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="bg-white px-6 py-16 lg:px-20">
+        <section className="bg-white px-6 py-16 lg:px-20 relative">
+          <div className='benfits-bg'></div>
           {/* Heading */}
           <div className="flex flex-col items-start mb-12">
             <div className="bg-[#11920030] border border-[#119200] text-[#000000] text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit">
