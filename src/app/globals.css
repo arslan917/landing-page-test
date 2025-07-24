@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -12,7 +13,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -22,5 +23,72 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Sora', sans-serif;
+}
+
+.w-90{
+  width: 90%;
+}
+
+.hero-bg {
+  background-image: url('/bg_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.hero-content--bg{
+  background-image: url('/bg_iphone.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.hero-content--bg--iphone{
+  background-image: url('/iphone1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  margin-top: 13%;
+  transform: rotate(13.97deg);
+}
+
+.token-support::before{
+  content: "";
+  background-image: url('/frame.png');
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  background-size: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-content{
+    flex-direction: column-reverse;
+  }
+  .hero-content--bg{
+    height: 65vh;
+    margin-top: -18%;
+  }
+  .hero-content--bg--iphone{
+    height: 50vh;
+    margin-top: 38%;
+    margin-right: 10%;
+  }
+  .hero-content--bg--card{
+    width: 160px;
+  }
 }
